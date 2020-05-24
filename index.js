@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const router = require('./route/first');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded ( { extended:false } ) );//body parser
 
 app.use(express.static(path.join(__dirname,'public')));//server static files
