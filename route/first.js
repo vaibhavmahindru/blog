@@ -23,10 +23,11 @@ router.get('/write', (req,res,next)=>{
 });
 
 router.get('/:id',  (req, res) => {
-    const article =   Article.findByOne({_id : req.params.id})
-    if (article == null) res.redirect('/')
+    
+    Article.findOne({_id : req.params.id}, function(err,obj) { 
+        res.render(__dirname + '/views/show.ejs', { article : obj });
+     })
    
-    res.render(__dirname + '/views/show.ejs', { article : article });
 })
 
 router.post('/submit', async (req,res)=>{
