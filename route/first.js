@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');  
 const Article = require('./../models/articles')
+const url = process.env.MONGODB_URI || 'mongodb://localhost/blog'
 
-mongoose.connect('mongodb://localhost/blog', { 
+mongoose.connect( url , { 
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
