@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BLOGS</title>
+    </head>
+    <body>
+        <%articles.forEach(article => { %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title"><%= article.title%></h4>
+                    <div class="card-subtitle text-muted mb-2">
+                        <div><%= article.createdAt.toLocaleDateString() %>&emsp;&emsp;&emsp;BY:&nbsp;<%= article.author %></div>
+                    </div>
+                    <div class="card-text mb-2">DESCRIPTION:&nbsp;<%= article.description%></div>
+                    <div class="card-text mb-2"><%= article.markdown%></div>
+                    <a href="first/<%= article.id%>" class="btn btn-primary">Read More</a>
+                    
+                </div>
+            </div>
+            <% }) %>
+            <br><a href="/" class="btn btn-danger">BACK</a>
+
+            <script src="first.js"></script>
+    </body>
+</html>

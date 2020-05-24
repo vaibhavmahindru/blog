@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blogging website",
+  "main": "first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "vaibhav",
+  "license": "ISC",
+  "dependencies": {
+    "dompurify": "^2.0.11",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "jsdom": "^16.2.2",
+    "marked": "^1.1.0",
+    "mongoose": "^5.9.7",
+    "mysql": "^2.18.1",
+    "slugify": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
