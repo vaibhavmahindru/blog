@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const router = require('./route/first');
 const app = express();
-
+const PORT = 3000;
 app.use(express.urlencoded ( { extended:false } ) );//body parser
 
 app.use(express.static(path.join(__dirname,'public')));//server static files
@@ -25,7 +25,7 @@ app.use((err,req,res,next)=>{
 })
 
 //server
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('server is running smoothly');
 });
 
