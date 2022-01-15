@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "jsdom": "^16.2.2",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "mongoose": "^5.9.7",
     "mysql": "^2.18.1",
     "slugify": "^1.4.0"
